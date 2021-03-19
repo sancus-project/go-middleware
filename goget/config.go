@@ -15,5 +15,9 @@ func PackagesFromFile(fn string) (Packages, error) {
 		return nil, err
 	}
 
+	if err := ini.Package.SetDefaults(); err != nil {
+		return nil, err
+	}
+
 	return ini.Package, nil
 }

@@ -39,3 +39,18 @@ func (m Packages) Get(r *http.Request) *View {
 
 	return nil
 }
+
+func (m Packages) SetDefaults() error {
+	for k, v := range m {
+		if v.URL == "" {
+			delete(m, k)
+			continue
+		}
+
+		if v.VCS == "" {
+			v.VCS = "git"
+		}
+	}
+
+	return nil
+}
