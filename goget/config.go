@@ -5,7 +5,7 @@ import (
 )
 
 type Config struct {
-	Package map[string]*Package
+	Package Packages
 }
 
 func PackagesFromFile(fn string) (Packages, error) {

@@ -8,7 +8,6 @@ import (
 
 type Renderer func(w http.ResponseWriter, r *http.Request, v *View) error
 
-
 func DefaultRenderer() Renderer {
 
 	tmpl := `<!DOCTYPE html>
