@@ -21,6 +21,10 @@ func (m *Packages) Middleware(renderer Renderer) func(http.Handler) http.Handler
 	}
 }
 
+func (c *Config) Middleware(next http.Handler) http.Handler {
+	return c.config.Package.Handler(next, c.Renderer)
+}
+
 func (m *Packages) Handler(next http.Handler, renderer Renderer) http.Handler {
 	if renderer == nil {
 		renderer = DefaultRenderer()
