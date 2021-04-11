@@ -64,7 +64,7 @@ func (v *Middleware) NewHandler(next http.Handler, m Packages) http.Handler {
 				return
 			} else if v.RedirectToDoc {
 				// redirect to doc
-				url := "https://pkg.go.dev/" + r.URL.Path
+				url := "https://pkg.go.dev/" + pkg.Request
 				http.Redirect(w, r, url, 302)
 				return
 			} else if v.RedirectToSources {
