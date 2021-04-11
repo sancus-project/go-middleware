@@ -9,8 +9,8 @@ import (
 type Middleware struct {
 	Renderer          Renderer // renders go-import html
 	OnlyGoGet         bool     // only render go-import html if ?go-get=1
-	RedirectToDoc     bool     // if package exists, but ?go-get=1 isn't give, redirect to documentation
-	RedirectToSources bool     // if package exists, but ?go-get=1 isn't give, redirect to sources
+	RedirectToDoc     bool     // if package exists, but ?go-get=1 isn't given, redirect to documentation
+	RedirectToSources bool     // if package exists, but ?go-get=1 isn't given, redirect to sources
 }
 
 // Middleware constructor from .ini file
