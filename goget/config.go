@@ -41,7 +41,7 @@ func (ini *config) load(fn string) error {
 }
 
 func (c *Config) Load() error {
-	ini := c.config
+	ini := &c.config
 	return ini.load(c.Filename)
 }
 
