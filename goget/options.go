@@ -45,7 +45,7 @@ func NewMiddleware(renderer Renderer, options ...MiddlewareOption) Middleware {
 			v.RedirectToSources = true
 		}
 		if r, ok := o.(SetRenderer); ok {
-			v.Renderer = renderer
+			v.Renderer = r.Renderer
 		}
 	}
 
