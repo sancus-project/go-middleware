@@ -2,9 +2,9 @@ package recover
 
 import (
 	"go.sancus.dev/web"
-	"go.sancus.dev/web/middleware/recover"
+	"go.sancus.dev/web/middleware"
 )
 
 func Recover(h web.ErrorHandlerFunc) web.MiddlewareHandlerFunc {
-	return recover.Recover(h)
+	return middleware.Recover(h)
 }
