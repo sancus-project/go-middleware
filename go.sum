@@ -1,5 +1,5 @@
-go.sancus.dev/web v0.9.0 h1:lZI/3MtnQ/sp2cAZABoyqfjvCknvvCgoL29U8lh9jZI=
-go.sancus.dev/web v0.9.0/go.mod h1:cyTmOsurEo7XLy8abXUmobc5ViHHdxSK/rse/h9HCIg=
+go.sancus.dev/web v0.10.0 h1:LRfcnWpWAJYI5g+FlN0mk8rmPWePHcSLsHQ3ckmxYr0=
+go.sancus.dev/web v0.10.0/go.mod h1:cyTmOsurEo7XLy8abXUmobc5ViHHdxSK/rse/h9HCIg=
 gopkg.in/gcfg.v1 v1.2.3 h1:m8OOJ4ccYHnx2f4gQwpno8nAX5OGOh7RLaaz0pj3Ogs=
 gopkg.in/gcfg.v1 v1.2.3/go.mod h1:yesOnuUOFQAhST5vPY4nbZsb/huCgGGXlipJsBn0b3o=
 gopkg.in/warnings.v0 v0.1.2 h1:wFXVbFY8DY5/xOe1ECiWdKCzZlxgshcYVNkBHstARME=

@@ -6,5 +6,5 @@ import (
 )
 
 func Recover(h web.ErrorHandlerFunc) web.MiddlewareHandlerFunc {
-	return middleware.Recover(h)
+	return middleware.Recoverer(h)
 }
