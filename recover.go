@@ -1,10 +1,10 @@
-package recover
+package middleware
 
 import (
 	"go.sancus.dev/web"
 	"go.sancus.dev/web/middleware"
 )
 
-func Recover(h web.ErrorHandlerFunc) web.MiddlewareHandlerFunc {
+func Recoverer(h web.ErrorHandlerFunc) web.MiddlewareHandlerFunc {
 	return middleware.Recoverer(h)
 }
