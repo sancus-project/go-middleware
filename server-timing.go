@@ -6,6 +6,7 @@ import (
 	"github.com/mitchellh/go-server-timing"
 
 	"go.sancus.dev/web"
+	"go.sancus.dev/web/middleware"
 )
 
 // Middleware accessor for github.com/mitchellh/go-server-timing
@@ -17,14 +18,12 @@ func ServerTimer(next http.Handler) http.Handler {
 // Middleware to produce a Server-Timer metric
 func ServerTimerMetric(name string) web.MiddlewareHandlerFunc {
 	if len(name) == 0 {
-		return func(next http.Handler) http.Handler {
-			return next
-		}
+		return middleware.NOP
 	}
 
 	return func(next http.Handler) http.Handler {
 		fn := func(w http.ResponseWriter, r *http.Request) {
-			if t := servertiming.FromContext(r.Context(); t != nil {
+			if t := servertiming.FromContext(r.Context()); t != nil {
 				defer t.NewMetric(name).Start().Stop()
 			}
 			next.ServeHTTP(w, r)
